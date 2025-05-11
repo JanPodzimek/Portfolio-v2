@@ -2,61 +2,46 @@
 
 import React from 'react';
 import SkillCard from '@/components/SkillCard';
-import {
-  FaCode,       // For C#
-  FaDatabase,   // For SQL Server
-  FaCloud,      // For Azure DevOps
-  FaPaperPlane, // For Postman
-  FaChartLine,  // For Kibana
-  FaServer,     // For AKHQ
-  FaProjectDiagram // For draw.io
-} from 'react-icons/fa';
-import { SiConfluence, SiJira } from 'react-icons/si'; // SiAzuredevops and SiDrawio removed
 
 const mainTools = [
-  { name: 'C#', icon: <FaCode /> },
-  { name: 'Microsoft SQL Server', icon: <FaDatabase /> },
-  { name: 'Azure DevOps', icon: <FaCloud /> }, // Using FaCloud
-  { name: 'Postman', icon: <FaPaperPlane /> },
-  { name: 'Kibana', icon: <FaChartLine /> },
-  { name: 'AKHQ', icon: <FaServer /> },
-];
-
-const additionalTools = [
-  { name: 'Confluence', icon: <SiConfluence /> },
-  { name: 'Jira', icon: <SiJira /> },
-  { name: 'draw.io', icon: <FaProjectDiagram /> }, // Using FaProjectDiagram
+  { name: 'C#', iconSrc: '/techIcons/c-sharp.png', description: 'Building API testing framework using C# and HttpClient. Writing my own testing tools that help me to test faster and more efficiently.' },
+  { name: 'Microsoft SQL Server', iconSrc: '/techIcons/sql-server.png', description: 'I use MS SQL for data validation, verifying backend processes, and supporting test scenarios. I regularly execute SQL queries to check data integrity, perform joins, filter records, and ensure the system stores and processes information as expected. I also use it to troubleshoot production issues when needed.' },
+  { name: 'Azure DevOps', iconSrc: '/techIcons/azure-devops.png', description: 'Managing CI/CD pipelines, building applications, and deploying them to both development and production environments. Managing source control, handling repositories, and collaborating through pull requests.' },
+  { name: 'Postman', iconSrc: '/techIcons/postman.png', description: 'Creating and managing collections, automated API test runs. Skilled in writing and maintaining test scripts.' },
 ];
 
 const Skills: React.FC = () => {
   return (
     <section 
       id="skills" 
-      className="min-h-screen bg-gray-100 dark:bg-gray-900 py-20 px-4 md:px-8 pt-16"
+      className="min-h-screen bg-gray-100 dark:bg-gray-900 py-20 px-4 md:px-8 pt-16 scroll-mt-16"
     >
       <div className="max-w-5xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-16 text-center">
-          My Skills & Tools
+         Technologies and tools I use the most
         </h2>
 
-        <div className="mb-16">
-          <h3 className="text-2xl font-semibold text-gray-800 dark:text-gray-200 mb-8 text-center md:text-left">
-            Main Tools
-          </h3>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-6 md:gap-8">
-            {mainTools.map((tool) => (
-              <SkillCard key={tool.name} icon={tool.icon} name={tool.name} level="Main" />
-            ))}
-          </div>
+        {/* Introductory Paragraph */}
+        <div className="mb-12 px-4 md:px-0">
+          <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed text-center mx-auto max-w-3xl">
+            As a software tester, I work with a variety of tools depending on the project. My daily routine often includes working with databases, APIs, Azure DevOps, and monitoring tools like Kibana or AKHQ. I also use essential non-technical tools such as Confluence for test documentation, Jira for bug tracking and reporting, and Draw.io for creating diagrams—an important part of analyzing new features. I'm also curious about AI tools and their impact on software development, and I actively look for ways to incorporate AI into testing whenever possible.
+          </p>
         </div>
 
-        <div>
-          <h3 className="text-2xl font-semibold text-gray-800 dark:text-gray-200 mb-8 text-center md:text-left">
-            Additional Tools
-          </h3>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-6 md:gap-8">
-            {additionalTools.map((tool) => (
-              <SkillCard key={tool.name} icon={tool.icon} name={tool.name} level="Additional" />
+        {/* Second Introductory Paragraph */}
+        <div className="mb-12 px-4 md:px-0">
+          <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed text-center mx-auto max-w-3xl">
+            Again, as a software tester, I quickly learn new tools and technologies as required by the development process. I'm experienced in front-end, back-end, integration, and end-to-end testing, and I adapt to whatever is needed to get the job done. Below is a list of tools I use most frequently in my daily work.
+          </p>
+        </div>
+
+        <div className="mb-16">
+          {/* <h3 className="text-2xl font-semibold text-gray-800 dark:text-gray-200 mb-8 text-center md:text-left">
+            Main Tools
+          </h3> */}
+          <div className="grid grid-cols-1 gap-6 md:gap-8">
+            {mainTools.map((tool) => (
+              <SkillCard key={tool.name} iconSrc={tool.iconSrc} name={tool.name} description={tool.description} level="Main" />
             ))}
           </div>
         </div>

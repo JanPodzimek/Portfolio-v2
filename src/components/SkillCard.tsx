@@ -3,16 +3,24 @@
 import React from 'react';
 
 interface SkillCardProps {
-  icon: React.ReactNode;
+  iconSrc: string;
   name: string;
-  level?: 'Main' | 'Additional'; // Optional level for styling or info
+  description: string;
+  level?: 'Main' | 'Additional';
 }
 
-const SkillCard: React.FC<SkillCardProps> = ({ icon, name }) => {
+const SkillCard: React.FC<SkillCardProps> = ({ iconSrc, name, description, level }) => {
   return (
-    <div className="flex flex-col items-center p-6 bg-gray-50 dark:bg-gray-700 rounded-lg shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300 ease-in-out">
-      <div className="text-5xl text-sky-600 dark:text-sky-400 mb-4">{icon}</div>
-      <span className="text-lg font-medium text-center text-gray-700 dark:text-gray-300">{name}</span>
+    <div className="flex flex-row items-center p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 ease-in-out w-full">
+      {/* Icon container */}
+      <div className="w-16 h-16 md:w-20 md:h-20 flex-shrink-0 flex items-center justify-center mr-4 md:mr-6">
+        <img src={iconSrc} alt={`${name} icon`} className="max-w-full max-h-full object-contain" />
+      </div>
+      {/* Text content container */}
+      <div className="flex-grow text-left">
+        <h3 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-white mb-1">{name}</h3>
+        <p className="text-sm text-gray-600 dark:text-gray-400">{description}</p>
+      </div>
     </div>
   );
 };

@@ -18,7 +18,13 @@ const Navigation: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
-            <span className="font-bold text-xl text-gray-800 dark:text-white">My Portfolio</span>
+            {/* Small circular photo */}
+            <img 
+              src="/profile-placeholder.png" // Placeholder image - replace with your photo in /public
+              alt="Jan Podzimek" 
+              className="h-10 w-10 rounded-full mr-3 object-cover border-2 border-sky-500 dark:border-sky-400"
+            />
+            <span className="font-bold text-xl text-gray-800 dark:text-white">Jan Podzimek</span>
           </div>
           <div className="hidden md:flex items-center">
             <div className="ml-10 flex items-baseline space-x-4">

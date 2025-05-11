@@ -30,3 +30,22 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+/* Other global styles */
+
+/* Ensure html and body take up full height for layout purposes */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  overflow-x: hidden; /* Prevent horizontal scroll caused by animations or wide elements */
+}
+
+/* Root element for Next.js app */
+#__next {
+  height: 100%;
+}
+
+/* Remove blob styles and animations */
