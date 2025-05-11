@@ -2,6 +2,7 @@
 
 import React from 'react';
 import FadeIn from '@/animations/FadeIn';
+import SectionTitle from '@/components/SectionTitle';
 
 const About: React.FC = () => {
   return (
@@ -10,9 +11,7 @@ const About: React.FC = () => {
       className="min-h-screen bg-white dark:bg-gray-800 py-20 px-4 md:px-8 pt-16 scroll-mt-16" // pt-16 for content, scroll-mt-16 for navbar offset
     >
       <FadeIn className="max-w-3xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-10 text-center">
-          About Me
-        </h2>
+        <SectionTitle title="About Me" />
         <div className="space-y-6 text-lg text-gray-700 dark:text-gray-300 leading-relaxed text-center">
           <p>
             After three years of full-time experience as a software tester, I'm still deeply passionate about my work. During this time, I've grown the most through exploratory and API testing, which I find especially engaging.

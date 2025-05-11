@@ -3,6 +3,7 @@
 import React from 'react';
 import CertificateCard from '@/components/CertificateCard';
 import FadeIn from '@/animations/FadeIn';
+import SectionTitle from '@/components/SectionTitle';
 // Placeholder for specific certificate icons if needed, e.g., from react-icons/si for specific issuers
 // import { SiCoursera, SiUdemy } from 'react-icons/si'; 
 
@@ -32,9 +33,7 @@ const Certificates: React.FC = () => {
       className="min-h-screen bg-white dark:bg-gray-800 py-20 px-4 md:px-8 pt-16 scroll-mt-16"
     >
       <FadeIn className="max-w-5xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-10 text-center">
-          My Certificates
-        </h2>
+        <SectionTitle title="My Certificates" />
         {/* Introductory List */}
         <div className="mb-12 px-4 md:px-0 mx-auto max-w-3xl">
           <ul className="list-disc list-outside space-y-3 text-lg text-gray-700 dark:text-gray-300 leading-relaxed text-left">

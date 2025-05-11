@@ -3,6 +3,7 @@
 import React from 'react';
 import SkillCard from '@/components/SkillCard';
 import FadeIn from '@/animations/FadeIn';
+import SectionTitle from '@/components/SectionTitle';
 
 const mainTools = [
   { name: 'Puzzle Solving', iconSrc: '/techIcons/brain-exercise.png', description: 'Solving puzzles helps me practice creativity, problem-solving, and critical thinking—skills that are essential for keeping my mind sharp. It trains me to think clearly and outside the box, which is crucial for doing my job effectively.' },
@@ -19,9 +20,7 @@ const Skills: React.FC = () => {
       className="min-h-screen bg-gray-100 dark:bg-gray-900 py-20 px-4 md:px-8 pt-16 scroll-mt-16"
     >
       <FadeIn className="max-w-5xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-16 text-center">
-         Technologies and tools I use the most
-        </h2>
+        <SectionTitle title="Technologies and tools I use the most" />
 
         {/* Introductory List */}
         <div className="mb-12 px-4 md:px-0 mx-auto max-w-3xl">

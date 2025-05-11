@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import GalleryItem from '@/components/GalleryItem';
 import ImageModal from '@/components/ImageModal';
 import FadeIn from '@/animations/FadeIn';
+import SectionTitle from '@/components/SectionTitle';
 
 const placeholderImages = [
   { id: '1', src: '/gallery/relax.JPG', alt: 'Gallery image - Relaxing' },
@@ -34,9 +35,7 @@ const Gallery: React.FC = () => {
       className="min-h-screen bg-gray-100 dark:bg-gray-900 py-20 px-4 md:px-8 pt-16 scroll-mt-16"
     >
       <FadeIn className="max-w-6xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-16 text-center">
-          Photo Gallery
-        </h2>
+        <SectionTitle title="Photo Gallery" />
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
           {placeholderImages.map((image, index) => (
             <GalleryItem 
