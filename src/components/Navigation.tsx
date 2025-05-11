@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import ThemeToggleButton from './ThemeToggleButton';
 
 const navItems = [
   { name: 'Home', href: '#landing' }, // Assuming 'landing' is the ID for the landing section
@@ -19,7 +20,7 @@ const Navigation: React.FC = () => {
           <div className="flex items-center">
             <span className="font-bold text-xl text-gray-800 dark:text-white">My Portfolio</span>
           </div>
-          <div className="hidden md:block">
+          <div className="hidden md:flex items-center">
             <div className="ml-10 flex items-baseline space-x-4">
               {navItems.map((item) => (
                 <Link
@@ -31,8 +32,13 @@ const Navigation: React.FC = () => {
                 </Link>
               ))}
             </div>
+            <div className="ml-4">
+              <ThemeToggleButton />
+            </div>
           </div>
-          {/* Mobile menu button will be added later as per Phase 4 */}
+          <div className="md:hidden ml-4">
+            <ThemeToggleButton />
+          </div>
         </div>
       </div>
     </nav>
