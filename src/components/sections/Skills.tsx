@@ -2,6 +2,7 @@
 
 import React from 'react';
 import SkillCard from '@/components/SkillCard';
+import FadeIn from '@/animations/FadeIn';
 
 const mainTools = [
   { name: 'Puzzle Solving', iconSrc: '/techIcons/brain-exercise.png', description: 'Solving puzzles helps me practice creativity, problem-solving, and critical thinking—skills that are essential for keeping my mind sharp. It trains me to think clearly and outside the box, which is crucial for doing my job effectively.' },
@@ -17,7 +18,7 @@ const Skills: React.FC = () => {
       id="skills" 
       className="min-h-screen bg-gray-100 dark:bg-gray-900 py-20 px-4 md:px-8 pt-16 scroll-mt-16"
     >
-      <div className="max-w-5xl mx-auto">
+      <FadeIn className="max-w-5xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-16 text-center">
          Technologies and tools I use the most
         </h2>
@@ -42,12 +43,14 @@ const Skills: React.FC = () => {
             Main Tools
           </h3> */}
           <div className="grid grid-cols-1 gap-6 md:gap-8">
-            {mainTools.map((tool) => (
-              <SkillCard key={tool.name} iconSrc={tool.iconSrc} name={tool.name} description={tool.description} level="Main" />
+            {mainTools.map((tool, index) => (
+              <FadeIn key={tool.name} delay={index * 0.1}>
+                <SkillCard iconSrc={tool.iconSrc} name={tool.name} description={tool.description} level="Main" />
+              </FadeIn>
             ))}
           </div>
         </div>
-      </div>
+      </FadeIn>
     </section>
   );
 };

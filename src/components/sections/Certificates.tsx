@@ -2,6 +2,7 @@
 
 import React from 'react';
 import CertificateCard from '@/components/CertificateCard';
+import FadeIn from '@/animations/FadeIn';
 // Placeholder for specific certificate icons if needed, e.g., from react-icons/si for specific issuers
 // import { SiCoursera, SiUdemy } from 'react-icons/si'; 
 
@@ -30,7 +31,7 @@ const Certificates: React.FC = () => {
       id="certificates" 
       className="min-h-screen bg-white dark:bg-gray-800 py-20 px-4 md:px-8 pt-16 scroll-mt-16"
     >
-      <div className="max-w-5xl mx-auto">
+      <FadeIn className="max-w-5xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-10 text-center">
           My Certificates
         </h2>
@@ -47,19 +48,20 @@ const Certificates: React.FC = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-          {placeholderCertificates.map((cert) => (
-            <CertificateCard 
-              key={cert.title} 
-              title={cert.title} 
-              issuer={cert.issuer}
-              date={cert.date}
-              url={cert.url} 
-              iconSrc={cert.iconSrc}
-              // defaultIcon={<SomeOtherIcon />} // Example if you had a different default
-            />
+          {placeholderCertificates.map((cert, index) => (
+            <FadeIn key={cert.title} delay={index * 0.1}>
+              <CertificateCard 
+                title={cert.title} 
+                issuer={cert.issuer}
+                date={cert.date}
+                url={cert.url} 
+                iconSrc={cert.iconSrc}
+                // defaultIcon={<SomeOtherIcon />} // Example if you had a different default
+              />
+            </FadeIn>
           ))}
         </div>
-      </div>
+      </FadeIn>
     </section>
   );
 };

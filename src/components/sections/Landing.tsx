@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { FaLinkedinIn, FaGithub } from 'react-icons/fa';
+import Image from 'next/image';
 
 const Landing: React.FC = () => {
   const scrollToAbout = () => {
@@ -39,23 +39,27 @@ const Landing: React.FC = () => {
         className="w-full h-80 md:h-auto md:w-2/5 lg:w-1/2 flex items-center justify-center overflow-hidden order-2 md:order-2 md:relative"
       >
         <div 
-          className="w-full h-full"
+          className="w-full h-full relative"
         >
           <div 
-            className="w-full h-full hidden md:block"
+            className="w-full h-full hidden md:block relative"
             style={{ clipPath: 'polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%)' }} 
           >
-            <img 
+            <Image 
               src="/my-landing-photo.jpg"
               alt="Landing page visual"
-              className="w-full h-full object-cover"
+              fill
+              style={{ objectFit: 'cover' }}
+              priority
             />
           </div>
-          <div className="w-full h-full md:hidden">
-            <img 
+          <div className="w-full h-full md:hidden relative">
+            <Image 
               src="/my-landing-photo.jpg"
               alt="Landing page visual"
-              className="w-full h-full object-cover"
+              fill
+              style={{ objectFit: 'cover' }}
+              priority
             />
           </div>
         </div>

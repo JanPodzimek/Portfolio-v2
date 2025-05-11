@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import FadeIn from '@/animations/FadeIn';
 
 const About: React.FC = () => {
   return (
@@ -8,7 +9,7 @@ const About: React.FC = () => {
       id="about" 
       className="min-h-screen bg-white dark:bg-gray-800 py-20 px-4 md:px-8 pt-16 scroll-mt-16" // pt-16 for content, scroll-mt-16 for navbar offset
     >
-      <div className="max-w-3xl mx-auto">
+      <FadeIn className="max-w-3xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-10 text-center">
           About Me
         </h2>
@@ -46,7 +47,7 @@ const About: React.FC = () => {
           </button>
         </div>
 
-      </div>
+      </FadeIn>
     </section>
   );
 };

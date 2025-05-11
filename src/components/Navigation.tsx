@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import ThemeToggleButton from './ThemeToggleButton';
 import { FaBars, FaTimes } from 'react-icons/fa';
 
@@ -37,11 +38,16 @@ const Navigation: React.FC = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             {/* Small circular photo */}
-            <img 
-              src="/profile-placeholder.png" // Placeholder image - replace with your photo in /public
-              alt="Jan Podzimek" 
-              className="h-10 w-10 rounded-full mr-3 object-cover border-2 border-sky-500 dark:border-sky-400"
-            />
+            <div className="relative h-10 w-10 rounded-full mr-3 overflow-hidden border-2 border-sky-500 dark:border-sky-400">
+              <Image 
+                src="/profile-placeholder.png" // Placeholder image - replace with your photo in /public
+                alt="Jan Podzimek" 
+                width={40}
+                height={40}
+                className="object-cover" // No need for h-10 w-10 if width/height set
+                priority // This is often above the fold
+              />
+            </div>
             <span className="font-bold text-xl text-gray-800 dark:text-white">Jan Podzimek</span>
           </div>
           

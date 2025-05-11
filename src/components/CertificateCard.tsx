@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import { FaCertificate, FaExternalLinkAlt } from 'react-icons/fa';
 
 interface CertificateCardProps {
@@ -21,9 +22,15 @@ const CertificateCard: React.FC<CertificateCardProps> = ({ title, issuer, date, 
       className="block p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-2xl hover:scale-105 transform transition-all duration-300 ease-in-out group"
     >
       <div className="flex items-start space-x-4">
-        <div className="w-12 h-12 md:w-14 md:h-14 flex-shrink-0 flex items-center justify-center text-3xl text-amber-500 dark:text-amber-400 mt-1 group-hover:text-amber-600 dark:group-hover:text-amber-300 transition-colors">
+        <div className="w-12 h-12 md:w-14 md:h-14 flex-shrink-0 flex items-center justify-center text-3xl text-amber-500 dark:text-amber-400 mt-1 group-hover:text-amber-600 dark:group-hover:text-amber-300 transition-colors relative">
           {iconSrc ? (
-            <img src={iconSrc} alt={`${title} icon`} className="max-w-full max-h-full object-contain rounded-sm" />
+            <Image 
+              src={iconSrc} 
+              alt={`${title} icon`} 
+              fill
+              style={{ objectFit: 'contain' }}
+              className="rounded-sm"
+            />
           ) : (
             defaultIcon || <FaCertificate />
           )}
