@@ -7,26 +7,19 @@ import CertificateCard from '@/components/CertificateCard';
 
 const placeholderCertificates = [
   {
-    title: 'ISTQB Certified Tester - Foundation Level',
+    title: 'ISTQB® Certified',
     issuer: 'ISTQB® - International Software Testing Qualifications Board',
-    date: 'Jan 2023',
-    url: 'https://www.istqb.org/certifications/certified-tester-foundation-level', // Replace with actual link
-    // icon: <FaCertificate /> // Default icon is already in CertificateCard
+    date: 'Jul 2024',
+    url: 'https://janpodzimek.wz.cz/images/CTFLv4-2024-01514-CSQ_Jan_Podzimek.pdf',
+    // Credential ID: CTFLv4-2024-01514-CSQ (not displayed on card by default)
   },
   {
-    title: 'API Testing with Postman - Advanced Course',
-    issuer: 'Udemy',
+    title: 'C1 English Proficiency',
+    issuer: 'goFLUENT',
     date: 'Mar 2023',
-    url: 'https://www.udemy.com/course/postman-the-complete-guide/', // Replace with actual link
-    // icon: <SiUdemy /> // Example specific icon
+    url: 'https://janpodzimek.wz.cz/images/Language%20Proficiency(C1).pdf',
   },
-  {
-    title: 'Introduction to Agile Development and Scrum',
-    issuer: 'Coursera',
-    date: 'Nov 2022',
-    url: 'https://www.coursera.org/learn/agile-software-development', // Replace with actual link
-    // icon: <SiCoursera /> // Example specific icon
-  },
+  // Third certificate removed
 ];
 
 const Certificates: React.FC = () => {
@@ -36,9 +29,21 @@ const Certificates: React.FC = () => {
       className="min-h-screen bg-white dark:bg-gray-800 py-20 px-4 md:px-8 pt-16 scroll-mt-16"
     >
       <div className="max-w-5xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-16 text-center">
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-10 text-center">
           My Certificates
         </h2>
+        {/* Introductory List */}
+        <div className="mb-12 px-4 md:px-0 mx-auto max-w-3xl">
+          <ul className="list-disc list-outside space-y-3 text-lg text-gray-700 dark:text-gray-300 leading-relaxed text-left">
+            <li>
+              I successfully passed the ISTQB Foundation Level exam. While I don't fully agree with everything the certification covers, I saw it as an important step to demonstrate my commitment at the beginning of my testing career.
+            </li>
+            <li>
+              I've also passed the C1 English proficiency exam, so I'm more than comfortable using English in a professional setting. 
+            </li>
+          </ul>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
           {placeholderCertificates.map((cert) => (
             <CertificateCard 

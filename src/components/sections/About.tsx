@@ -17,7 +17,7 @@ const About: React.FC = () => {
             After three years of full-time experience as a software tester, I'm still deeply passionate about my work. During this time, I've grown the most through exploratory and API testing, which I find especially engaging.
           </p>
           <p>
-            Currently, I work at Alza.cz, where I test the Alza Trade project and continuously expand my knowledge and skills in software testing.
+            Currently, I work at Alza.cz, where I test the Alza Trade project and continuously expand my knowledge and skills in software testing. I quickly learn new tools and technologies as required by the development process. I'm experienced in front-end, back-end, integration, and end-to-end testing, and I adapt to whatever is needed to get the job done.
           </p>
           <p>
             Outside of work, I've been studying English as a hobby since 2018. Since 2021, I've taken professional private lessons, which have significantly improved my speaking abilities.

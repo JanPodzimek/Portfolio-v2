@@ -22,18 +22,19 @@ const Skills: React.FC = () => {
          Technologies and tools I use the most
         </h2>
 
-        {/* Introductory Paragraph */}
-        <div className="mb-12 px-4 md:px-0">
-          <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed text-center mx-auto max-w-3xl">
-            As a software tester, I work with a variety of tools depending on the project. My daily routine often includes working with databases, APIs, Azure DevOps, and monitoring tools like Kibana or AKHQ. I also use essential non-technical tools such as Confluence for test documentation, Jira for bug tracking and reporting, and Draw.io for creating diagrams—an important part of analyzing new features. I'm also curious about AI tools and their impact on software development, and I actively look for ways to incorporate AI into testing whenever possible.
-          </p>
-        </div>
-
-        {/* Second Introductory Paragraph */}
-        <div className="mb-12 px-4 md:px-0">
-          <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed text-center mx-auto max-w-3xl">
-            Again, as a software tester, I quickly learn new tools and technologies as required by the development process. I'm experienced in front-end, back-end, integration, and end-to-end testing, and I adapt to whatever is needed to get the job done. Below is a list of tools I use most frequently in my daily work.
-          </p>
+        {/* Introductory List */}
+        <div className="mb-12 px-4 md:px-0 mx-auto max-w-3xl">
+          <ul className="list-disc list-outside space-y-3 text-lg text-gray-700 dark:text-gray-300 leading-relaxed text-left">
+            <li>
+              As a software tester, I work with a variety of tools depending on the project. My daily routine often includes working with databases, APIs, Azure DevOps, and monitoring tools like Kibana or AKHQ.
+            </li>
+            <li>
+              I also use essential non-technical tools such as Confluence for test documentation, Jira for bug tracking and reporting, and Draw.io for creating diagrams—an important part of analyzing new features.
+            </li>
+            <li>
+            Curiosity about AI tools and their impact on software development drives me to actively explore their use in testing whenever possible.
+            </li>
+          </ul>
         </div>
 
         <div className="mb-16">
