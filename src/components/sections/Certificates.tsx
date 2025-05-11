@@ -11,6 +11,7 @@ const placeholderCertificates = [
     issuer: 'ISTQB® - International Software Testing Qualifications Board',
     date: 'Jul 2024',
     url: 'https://janpodzimek.wz.cz/images/CTFLv4-2024-01514-CSQ_Jan_Podzimek.pdf',
+    iconSrc: '/techIcons/istqb.png',
     // Credential ID: CTFLv4-2024-01514-CSQ (not displayed on card by default)
   },
   {
@@ -18,6 +19,7 @@ const placeholderCertificates = [
     issuer: 'goFLUENT',
     date: 'Mar 2023',
     url: 'https://janpodzimek.wz.cz/images/Language%20Proficiency(C1).pdf',
+    iconSrc: '/techIcons/uk.png',
   },
   // Third certificate removed
 ];
@@ -52,7 +54,8 @@ const Certificates: React.FC = () => {
               issuer={cert.issuer}
               date={cert.date}
               url={cert.url} 
-              // icon={cert.icon} // Pass specific icon if defined
+              iconSrc={cert.iconSrc}
+              // defaultIcon={<SomeOtherIcon />} // Example if you had a different default
             />
           ))}
         </div>

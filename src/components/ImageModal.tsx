@@ -34,7 +34,7 @@ const ImageModal: React.FC<ImageModalProps> = ({ src, alt, onClose }) => {
         <img src={src} alt={alt} className="block max-w-full max-h-[85vh] rounded object-contain" />
         <button 
           onClick={onClose}
-          className="absolute top-2 right-2 text-white bg-black bg-opacity-50 hover:bg-opacity-75 rounded-full p-2 transition-colors text-2xl"
+          className="absolute top-2 right-2 text-white bg-black bg-opacity-50 hover:bg-opacity-75 rounded-full p-2 transition-colors text-2xl cursor-pointer"
           aria-label="Close image preview"
         >
           <FaTimes />

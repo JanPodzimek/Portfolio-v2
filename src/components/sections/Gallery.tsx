@@ -5,12 +5,9 @@ import GalleryItem from '@/components/GalleryItem';
 import ImageModal from '@/components/ImageModal';
 
 const placeholderImages = [
-  { id: '1', src: 'https://picsum.photos/seed/gallery1/600/400', alt: 'Gallery image 1' },
-  { id: '2', src: 'https://picsum.photos/seed/gallery2/600/400', alt: 'Gallery image 2' },
-  { id: '3', src: 'https://picsum.photos/seed/gallery3/600/400', alt: 'Gallery image 3' },
-  { id: '4', src: 'https://picsum.photos/seed/gallery4/600/400', alt: 'Gallery image 4' },
-  { id: '5', src: 'https://picsum.photos/seed/gallery5/600/400', alt: 'Gallery image 5' },
-  { id: '6', src: 'https://picsum.photos/seed/gallery6/600/400', alt: 'Gallery image 6' },
+  { id: '1', src: '/gallery/relax.JPG', alt: 'Gallery image - Relaxing' },
+  { id: '2', src: '/gallery/guitar.jpg', alt: 'Gallery image - Playing guitar' },
+  { id: '3', src: '/gallery/ruckovani.jpg', alt: 'Gallery image - Ruckovani (activity)' }
 ];
 
 const Gallery: React.FC = () => {

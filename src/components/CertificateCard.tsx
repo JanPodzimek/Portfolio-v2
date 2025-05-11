@@ -5,13 +5,14 @@ import { FaCertificate, FaExternalLinkAlt } from 'react-icons/fa';
 
 interface CertificateCardProps {
   title: string;
-  issuer: string; // Added issuer for more detail
-  date: string;   // Added date of issuance
+  issuer: string;
+  date: string;
   url: string;
-  icon?: React.ReactNode;
+  iconSrc?: string; // Optional: path to a custom image icon
+  defaultIcon?: React.ReactNode; // Optional: fallback React icon if iconSrc is not provided
 }
 
-const CertificateCard: React.FC<CertificateCardProps> = ({ title, issuer, date, url, icon }) => {
+const CertificateCard: React.FC<CertificateCardProps> = ({ title, issuer, date, url, iconSrc, defaultIcon }) => {
   return (
     <a 
       href={url} 
@@ -20,8 +21,12 @@ const CertificateCard: React.FC<CertificateCardProps> = ({ title, issuer, date, 
       className="block p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-2xl hover:scale-105 transform transition-all duration-300 ease-in-out group"
     >
       <div className="flex items-start space-x-4">
-        <div className="text-3xl text-amber-500 dark:text-amber-400 mt-1 group-hover:text-amber-600 dark:group-hover:text-amber-300 transition-colors">
-          {icon || <FaCertificate />}
+        <div className="w-12 h-12 md:w-14 md:h-14 flex-shrink-0 flex items-center justify-center text-3xl text-amber-500 dark:text-amber-400 mt-1 group-hover:text-amber-600 dark:group-hover:text-amber-300 transition-colors">
+          {iconSrc ? (
+            <img src={iconSrc} alt={`${title} icon`} className="max-w-full max-h-full object-contain rounded-sm" />
+          ) : (
+            defaultIcon || <FaCertificate />
+          )}
         </div>
         <div className="flex-1">
           <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-1 group-hover:text-sky-600 dark:group-hover:text-sky-400 transition-colors">
