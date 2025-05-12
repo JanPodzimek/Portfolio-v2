@@ -6,11 +6,11 @@ import FadeIn from '@/animations/FadeIn';
 import SectionTitle from '@/components/SectionTitle';
 
 const mainTools = [
-  { name: 'Puzzle Solving', iconSrc: '/techIcons/brain-exercise.png', description: 'Solving puzzles helps me practice creativity, problem-solving, and critical thinking—skills that are essential for keeping my mind sharp. It trains me to think clearly and outside the box, which is crucial for doing my job effectively.' },
   { name: 'C#', iconSrc: '/techIcons/c-sharp.png', description: 'Building API testing framework using C# and HttpClient. Writing my own testing tools that help me to test faster and more efficiently.' },
   { name: 'Microsoft SQL Server', iconSrc: '/techIcons/sql-server.png', description: 'I use MS SQL for data validation, verifying backend processes, and supporting test scenarios. I regularly execute SQL queries to check data integrity, perform joins, filter records, and ensure the system stores and processes information as expected. I also use it to troubleshoot production issues when needed.' },
   { name: 'Azure DevOps', iconSrc: '/techIcons/azure-devops.png', description: 'Managing CI/CD pipelines, building applications, and deploying them to both development and production environments. Managing source control, handling repositories, and collaborating through pull requests.' },
   { name: 'Postman', iconSrc: '/techIcons/postman.png', description: 'Creating and managing collections, automated API test runs. Skilled in writing and maintaining test scripts.' },
+{ name: 'Puzzle Solving', iconSrc: '/techIcons/brain-exercise.png', description: 'Solving puzzles helps me practice creativity, problem-solving, and critical thinking—skills that are essential for keeping my mind sharp. It trains me to think clearly and outside the box, which is crucial for doing my job effectively.' }
 ];
 
 const Skills: React.FC = () => {
