@@ -37,7 +37,7 @@ const Gallery: React.FC = () => {
       <FadeIn className="max-w-6xl mx-auto">
         <SectionTitle title="Photo Gallery" />
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
-          {placeholderImages.map((image, index) => (
+          {placeholderImages.map((image) => (
             <GalleryItem 
               key={image.id} 
               src={image.src} 

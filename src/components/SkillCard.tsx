@@ -7,10 +7,9 @@ interface SkillCardProps {
   iconSrc: string;
   name: string;
   description: string;
-  level?: 'Main' | 'Additional';
 }
 
-const SkillCard: React.FC<SkillCardProps> = ({ iconSrc, name, description, level }) => {
+const SkillCard: React.FC<SkillCardProps> = ({ iconSrc, name, description }) => {
   return (
     <div className="flex flex-row items-center p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 ease-in-out w-full">
       {/* Icon container */}
