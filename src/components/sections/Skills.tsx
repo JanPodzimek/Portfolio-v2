@@ -32,7 +32,7 @@ const Skills: React.FC = () => {
               I also use essential non-technical tools such as Confluence for test documentation, Jira for bug tracking and reporting, and Draw.io for creating diagrams—an important part of analyzing new features.
             </li>
             <li>
-            Curiosity about AI tools and their impact on software development drives me to actively explore their use in testing whenever possible.
+              Curiosity about AI tools and their impact on software development drives me to actively explore their use in testing whenever possible.
             </li>
           </ul>
         </div>
@@ -44,7 +44,11 @@ const Skills: React.FC = () => {
           <div className="grid grid-cols-1 gap-6 md:gap-8">
             {mainTools.map((tool, index) => (
               <FadeIn key={tool.name} delay={index * 0.1}>
-                <SkillCard iconSrc={tool.iconSrc} name={tool.name} description={tool.description} level="Main" />
+                <SkillCard 
+                  iconSrc={tool.iconSrc} 
+                  name={tool.name} 
+                  description={tool.description} 
+                />
               </FadeIn>
             ))}
           </div>
