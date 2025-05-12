@@ -12,7 +12,7 @@ const placeholderCertificates = [
     title: 'ISTQB® Certified',
     issuer: 'ISTQB® - International Software Testing Qualifications Board',
     date: 'Jul 2024',
-    url: 'https://janpodzimek.wz.cz/images/CTFLv4-2024-01514-CSQ_Jan_Podzimek.pdf',
+    url: '/certificates/istqb-certificate.pdf',
     iconSrc: '/techIcons/istqb.png',
     // Credential ID: CTFLv4-2024-01514-CSQ (not displayed on card by default)
   },
@@ -20,7 +20,7 @@ const placeholderCertificates = [
     title: 'C1 English Proficiency',
     issuer: 'goFLUENT',
     date: 'Mar 2023',
-    url: 'https://janpodzimek.wz.cz/images/Language%20Proficiency(C1).pdf',
+    url: '/certificates/english-proficiency.pdf',
     iconSrc: '/techIcons/uk.png',
   },
   // Third certificate removed
