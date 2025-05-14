@@ -14,7 +14,7 @@ const Landing: React.FC = () => {
   return (
     <section 
       id="landing" 
-      className="min-h-screen flex flex-col md:flex-row items-stretch bg-gray-50 dark:bg-gray-900 relative overflow-hidden pt-24 md:pt-0 scroll-mt-20"
+      className="min-h-screen flex flex-col md:flex-row items-stretch relative overflow-hidden pt-24 md:pt-0 scroll-mt-20 section-bg-properties landing-bg apply-light2-bg"
     >
       <div className="w-full md:w-3/5 lg:w-1/2 flex flex-col justify-center items-center md:items-start p-8 md:p-12 lg:p-16 text-center md:text-left z-10 order-1 md:order-1">
         <p className="text-sky-600 dark:text-sky-400 font-semibold text-sm md:text-base uppercase tracking-wider mb-2">
@@ -36,7 +36,7 @@ const Landing: React.FC = () => {
       </div>
 
       <div 
-        className="w-full h-80 md:h-auto md:w-2/5 lg:w-1/2 flex items-center justify-center overflow-hidden order-2 md:order-2 md:relative"
+        className="w-full h-80 md:h-auto flex-grow md:flex-grow-0 md:w-2/5 lg:w-1/2 flex items-center justify-center overflow-hidden order-2 md:order-2 md:relative"
       >
         <div 
           className="w-full h-full relative"

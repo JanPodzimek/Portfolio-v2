@@ -10,7 +10,7 @@ const navItems = [
   { name: 'Home', href: '#landing' }, // Assuming 'landing' is the ID for the landing section
   { name: 'About', href: '#about' },
   { name: 'Skills', href: '#skills' },
-  { name: 'Certificates', href: '#certificates' },
+  { name: 'Certifications', href: '#certifications' },
   { name: 'Gallery', href: '#gallery' },
 ];
 

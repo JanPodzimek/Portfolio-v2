@@ -29,11 +29,11 @@ const placeholderCertificates = [
 const Certificates: React.FC = () => {
   return (
     <section 
-      id="certificates" 
-      className="min-h-screen bg-white dark:bg-gray-800 py-20 px-4 md:px-8 pt-16 scroll-mt-16"
+      id="certifications" 
+      className="min-h-screen py-20 px-4 md:px-8 pt-16 scroll-mt-16 section-bg-properties about-certs-bg apply-light2-bg"
     >
       <FadeIn className="max-w-5xl mx-auto">
-        <SectionTitle title="My Certificates" />
+        <SectionTitle title="My Certifications" />
         {/* Introductory List */}
         <div className="mb-12 px-4 md:px-0 mx-auto max-w-3xl">
           <ul className="list-disc list-outside space-y-3 text-lg text-gray-700 dark:text-gray-300 leading-relaxed text-left">

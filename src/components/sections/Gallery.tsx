@@ -32,7 +32,7 @@ const Gallery: React.FC = () => {
   return (
     <section 
       id="gallery" 
-      className="min-h-screen bg-gray-100 dark:bg-gray-900 py-20 px-4 md:px-8 pt-16 scroll-mt-16"
+      className="min-h-screen py-20 px-4 md:px-8 pt-16 scroll-mt-16 section-bg-properties skills-gallery-bg apply-light2-bg"
     >
       <FadeIn className="max-w-6xl mx-auto">
         <SectionTitle title="Photo Gallery" />

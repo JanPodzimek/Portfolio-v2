@@ -29,7 +29,16 @@ body {
 
 html {
   scroll-behavior: smooth;
+  --section-light-bg-image: url('/background/light.jpg'); /* For About & Certificates light mode - WILL BE OVERRIDDEN for light2 */
+  --section-dark-bg-image: url('/background/dark.jpg');  /* For Landing dark mode ONLY */
+  --section-dark2-bg-image: url('/background/dark2.jpg'); /* For About, Cert, Skills, Gallery dark mode */
+  --section-tech-gallery-light-bg-image: url('/background/light2.jpg'); /* For Landing, About, Cert, Skills, Gallery light mode */
+  --section-bg-size: cover;
+  --section-bg-position: center center;
+  --section-bg-repeat: no-repeat;
 }
+
+/* html.dark specific overrides for variables are not needed here if images are distinct */
 
 /* Other global styles */
 
@@ -49,3 +58,41 @@ body {
 }
 
 /* Remove blob styles and animations */
+
+.section-bg-properties { /* Common properties for sections with custom backgrounds */
+  background-size: var(--section-bg-size);
+  background-position: var(--section-bg-position);
+  background-repeat: var(--section-bg-repeat);
+}
+
+/* LANDING SECTION BACKGROUNDS */
+.landing-bg { /* Light mode for Landing section - uses tech-gallery-light-bg now */
+  /* No background-image here by default, applied by another class */
+}
+.dark .landing-bg { /* Dark mode for Landing section - now uses dark2.jpg */
+  background-image: var(--section-dark2-bg-image);
+}
+
+/* ABOUT & CERTIFICATES SECTION BACKGROUNDS */
+.about-certs-bg { /* Light mode uses tech-gallery-light-bg. Dark mode specific below */
+  /* No background-image here by default, applied by another class */
+}
+.dark .about-certs-bg { /* Dark mode for About & Certificates - uses dark2.jpg */
+  background-image: var(--section-dark2-bg-image);
+}
+
+/* SKILLS & GALLERY SECTION BACKGROUNDS */
+.skills-gallery-bg { /* Light mode uses tech-gallery-light-bg. Dark mode specific below. */
+  /* No background-image here by default, applied by another class */
+}
+.dark .skills-gallery-bg { /* Dark mode for Skills & Gallery - uses dark2.jpg */
+  background-image: var(--section-dark2-bg-image);
+}
+
+/* CLASS TO APPLY LIGHT2.JPG FOR LIGHT MODE */
+.apply-light2-bg {
+  background-image: var(--section-tech-gallery-light-bg-image);
+}
+
+/* CLEANUP: Removing .about-bg and .tech-gallery-light-bg as separate top-level rules */
+/* The functionality is now integrated or replaced by the new structure */
