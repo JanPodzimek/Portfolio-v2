@@ -30,7 +30,7 @@ const FadeIn: React.FC<FadeInProps> = ({
     } else if (!triggerOnce) {
       controls.start('hidden');
     }
-  }, [controls, inView, triggerOnce, className]);
+  }, [controls, inView, triggerOnce]);
 
   const variants = {
     hidden: { opacity: 0 },
